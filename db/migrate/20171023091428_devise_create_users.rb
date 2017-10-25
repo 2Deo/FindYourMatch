@@ -3,7 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
     create_table :users do |t|
 
       ## Admin?
-      t.boolean :admin
+      t.boolean :admin, default: false
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
