@@ -1,10 +1,9 @@
-Student.destroy_all
 User.destroy_all
 
+admin = User.create!(email: "admin@go.com", password: "1234abcd", admin: true)
 elvin = User.create!(email: "elvin@go.com", password: "1234abcd")
 su = User.create!(email: "su@go.com", password: "1234abcd")
-admin = User.create!(email: "admin@go.com", password: "1234abcd", admin: true)
-
-elvin = Student.create!(name: "elvin", user: elvin)
-su = Student.create!(name: "su", user: su)
-admin = Student.create!(name: "admin", user: admin)
+barry = User.create!(email: "barry@go.com", password: "1234abcd")
+martin = User.create!(email: "martin@go.com", password: "1234abcd")
+sly = User.create!(email: "sly@go.com", password: "1234abcd")
+robbie = User.create!(email: "robbie@go.com", password: "1234abcd")
