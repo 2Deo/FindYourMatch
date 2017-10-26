@@ -4,13 +4,11 @@ class UsersController < ApplicationController
 
       def home
         @users = User.all
-        #@matches = Match.all
       end
 
       def show
         @user = User.find(params[:id])
         @students_pool = User.students
-        #@matches = Match.new
       end
 
       def update
