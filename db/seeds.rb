@@ -10,7 +10,7 @@ sly = User.create!(email: "sly@go.com", password: "1234abcd")
 robbie = User.create!(email: "robbie@go.com", password: "1234abcd")
 
 Match.create!([
-  { date: , user: elvin+su },
-  { name: "Mosasaurus", user: barry+martin },
-  { name: "Hungarosaurus", user: sly+robbie },
+  {  pair: 1 },
+  {  pair: 2 },
+  {  pair: 3 },
 ])
