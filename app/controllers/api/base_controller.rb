@@ -5,10 +5,10 @@ module Api
     before_action :authenticate
 
     def authenticate
-      user_token = request.headers['X-USER-TOKEN']
-      if user_token
-        @user = User.find_by_token(user_token)
-        return unauthorize if @user.nil?
+      admin_token = request.headers['X-USER-TOKEN']
+      if admin_token
+        @admin = Admin.find_by_token(admin_token)
+        return unauthorize if @admin.nil?
       else
         return unauthorize
       end

@@ -7,7 +7,7 @@ class Api::MatchesController < Api::BaseController
   end
 
   def createMatch
-    match = @user.matches.build(match_params)
+    match = @admin.matches.build(match_params)
 
     if match.save
       render status: 201, json: match

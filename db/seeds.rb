@@ -1,7 +1,7 @@
 User.destroy_all
 Match.destroy_all
+Admin.destroy_all
 
-admin = User.create!(email: "admin@go.com", password: "1234abcd", admin: true)
 elvin = User.create!(email: "elvin@go.com", password: "1234abcd")
 su = User.create!(email: "su@go.com", password: "1234abcd")
 barry = User.create!(email: "barry@go.com", password: "1234abcd")
@@ -14,3 +14,8 @@ Match.create!([
   {  pair: 2 },
   {  pair: 3 },
 ])
+
+Admin.create!([
+  { email: "admin@go.com", password: "1234abcd"}
+
+  ])
