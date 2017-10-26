@@ -1,0 +1,30 @@
+<h1> Admin & Student Management </h1>
+
+<div class = "table-container">
+  <table class = "table table-hover">
+    <tr class = "table-header">
+      <th>User</th>
+      <th>Promote</th>
+      <th>Current Role</th>
+    </tr>
+
+      <% @users.each do |user| %>
+
+        <tr class = "table-row">
+          <td><%= user.email %></td>
+
+          <% if user.is_admin? %>
+            <td class="right_column"><%= link_to "Demote", user, method: :patch, data: {confirm: "Please confirm"}, class: "btn btn-default" %></td>
+          <% else %>
+            <td class="right-column"><%= link_to "Promote", user, method: :patch, data: { confirm: "Please confirm"}, class: "btn btn-default" %></td>
+          <% end %>
+
+          <% if user.is_admin? %>
+            <td> Teacher </td>
+          <% else %>
+            <td> Student </td>
+          <% end %>
+        </tr>
+    <% end %>
+  </table>
+</div>
