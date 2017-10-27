@@ -1,8 +1,10 @@
 <h1>Welcome <%= @user.name %></h1>
 
 <% if current_user.is_admin? %>
-<p> The Matches for this week are: </p>
-<% @students.each do |pair| %>
-<p>Day  :<%= pair.split.shift %></p>
-<%end %>
+  <p> The Matches for this week are: </p>
+    <% @students.each do |pair| %>
+  <p>Day  :<%= pair.split.shift %></p>
+    <%end %>
+<% else %>
+  <p> Your Match for the Day is : </p>
 <%end %>
