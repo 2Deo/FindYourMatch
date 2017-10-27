@@ -29,16 +29,6 @@ class User < ApplicationRecord
         return @matched_pairs_array
       end
 
-      def generate_sliced_pairs
-        @day_one = @matched_pairs_array.slice!(0)
-        @day_two = @matched_pairs_array.slice!(0)
-        @day_three = @matched_pairs_array.slice!(0)
-        @day_four = @matched_pairs_array.slice!(0)
-        @day_five = @matched_pairs_array.slice!(0)
-      end
-
-  # 4. Slice our pairs
-
 
 
       def is_admin?
