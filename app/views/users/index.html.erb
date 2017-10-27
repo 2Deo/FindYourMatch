@@ -11,7 +11,7 @@
       <% @users.each do |user| %>
 
         <tr class = "table-row">
-          <td><%= user.email %></td>
+          <td><%= link_to user.email, user_path(user.id) %></td>
 
           <% if user.is_admin? %>
             <td class="right_column"><%= link_to "Demote", user, method: :patch, data: {confirm: "Please confirm"}, class: "btn btn-default" %></td>

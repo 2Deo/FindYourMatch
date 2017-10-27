@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root "users#home"
+  root "users#index"
 
   devise_for :users
 
-  resources :users, only: [:show, :home, :update] do
+  resources :users, only: [:show, :index, :update] do
     resources :matches
   end
 
