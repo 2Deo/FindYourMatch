@@ -3,13 +3,14 @@ class UsersController < ApplicationController
   before_action :authenticate, only: [:update]
 
 
-      def home
+      def index
         @users = User.all
       end
 
+
       def show
         @user = User.find(params[:id])
-        @students_pool = User.students
+        @students = User.students
       end
 
       def update

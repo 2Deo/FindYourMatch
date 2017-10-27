@@ -1,0 +1,7 @@
+<h1>Welcome <%= @user.name %></h1>
+
+
+<p> Your Match for today is: </p>
+<%= @student_not_admin.each do |student| %>
+<%= student.name %>
+<%end %>

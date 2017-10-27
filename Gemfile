@@ -62,3 +62,5 @@ gem 'jquery-rails', '~> 4.3.1'
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
 gem 'cancan'
+
+gem 'round_robin_tournament'
