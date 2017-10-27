@@ -1,8 +1,5 @@
 require 'rails_helper'
 
-FactoryGirl.define do
-  factory :user do
-    email    { Faker::Internet.email }
-    password { Faker::Internet.password }
-  end
+RSpec.describe User, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
